@@ -3,838 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Mart Global | Sales Analytics</title>
+    <title>E-Mart Global Sales Analysis</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">E-MART<span> GLOBAL</span></div>
+    <nav class="navbar">
+        <div class="logo">E-MART<span>.</span></div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#dataset">Dataset</a>
-        <a href="#analysis">Analysis</a>
-        <a href="#analyzer">Analyzer</a>
-        <a href="#conclusion">Conclusion</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Introduction</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#technology">Technologies</a></li>
+            <li><a href="#insights">Customer Insights</a></li>
+            <li><a href="#survey">Survey</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
     </nav>
 </header>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <p class="tag">INFORMATICS PRACTICES PROJECT</p>
-        <h1>E-Mart Global<br><span>Sales Analysis</span></h1>
-        <p>
-            Discover sales patterns, understand profit
-            and explore business performance through data analysis.
-        </p>
-        <a href="#analysis" class="main-btn">Explore Dashboard</a>
-    </div>
+<main>
 
-    <div class="hero-card">
-        <div class="card-icon">📊</div>
-        <h3>Sales Analytics</h3>
-        <p>Data-driven business insights</p>
-        <div class="hero-line"></div>
-        <div class="hero-line short"></div>
-    </div>
-</section>
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="tagline">DATA • BUSINESS • INSIGHTS</p>
 
-<section id="about" class="section">
-    <p class="tag">PROJECT OVERVIEW</p>
-    <h2>About the Project</h2>
-    <p class="description">
-        E-Mart Global Sales Analysis is a data-analysis project
-        designed to study sales and profit information of a retail
-        business using Python, Pandas, Matplotlib and SQL.
-    </p>
+            <h1>
+                E-Mart Global<br>
+                <span>Sales Analysis</span>
+            </h1>
 
-    <div class="cards">
-        <div class="info-card">
-            <span>🎯</span>
-            <h3>Objective</h3>
-            <p>Analyse sales, profit, products, categories and regions.</p>
+            <p class="hero-description">
+                Discover meaningful patterns in sales, profit,
+                products and customer preferences through data analysis.
+            </p>
+
+            <a href="#about" class="main-button">Explore Project</a>
         </div>
 
-        <div class="info-card">
-            <span>💻</span>
-            <h3>Technologies</h3>
-            <p>Python, Pandas, Matplotlib, SQL, HTML, CSS and JavaScript.</p>
-        </div>
-
-        <div class="info-card">
-            <span>📈</span>
-            <h3>Purpose</h3>
-            <p>Convert sales information into useful business insights.</p>
-        </div>
-    </div>
-</section>
-
-<section id="dataset" class="section">
-    <p class="tag">DATA INFORMATION</p>
-    <h2>Dataset Overview</h2>
-    <p class="description">
-        The dataset is created directly inside the Python program.
-        It contains information related to E-Mart Global sales.
-    </p>
-
-    <div class="dataset-grid">
-        <div>Order ID</div>
-        <div>Order Date</div>
-        <div>Customer Name</div>
-        <div>Category</div>
-        <div>Product Name</div>
-        <div>Region</div>
-        <div>Sales</div>
-        <div>Quantity</div>
-        <div>Profit</div>
-        <div>Payment Mode</div>
-    </div>
-</section>
-
-<section id="analysis" class="section">
-    <p class="tag">BUSINESS INSIGHTS</p>
-    <h2>Sales Analysis</h2>
-    <p class="description">
-        Explore the important analysis performed using Python and Pandas.
-    </p>
-
-    <div class="cards">
-        <div class="info-card">
-            <span>💰</span>
-            <h3>Total Sales</h3>
-            <p>Calculation of total sales generated.</p>
-        </div>
-
-        <div class="info-card">
-            <span>📊</span>
-            <h3>Total Profit</h3>
-            <p>Calculation of total profit earned.</p>
-        </div>
-
-        <div class="info-card">
-            <span>🏆</span>
-            <h3>Top Products</h3>
-            <p>Identification of the five highest-selling products.</p>
-        </div>
-    </div>
-
-    <div class="chart-box">
-        <h3>Python Analysis & Visualizations</h3>
-        <p>
-            Insert your actual Python results and Matplotlib graphs
-            in this section.
-        </p>
-        <div class="chart-placeholder">
-            Your actual sales graphs will appear here.
-        </div>
-    </div>
-
-    <div class="sql-box">
-        <h3>SQL Analysis</h3>
-        <p>SQL is used to retrieve and analyse sales information.</p>
-        <ul>
-            <li>Display all orders</li>
-            <li>Find total sales and profit</li>
-            <li>Find sales by category and region</li>
-            <li>Identify high-selling products</li>
-        </ul>
-    </div>
-</section>
-
-<section id="analyzer" class="section">
-    <p class="tag">INTERACTIVE TOOL</p>
-    <h2>Sales & Profit Analyzer</h2>
-    <p class="description">
-        Enter your sales amount and cost amount to calculate profit.
-    </p>
-
-    <div class="analyzer">
-        <label for="sales">Sales Amount</label>
-        <input type="number" id="sales" placeholder="Enter sales amount" min="0" step="any">
-
-        <label for="cost">Cost Amount</label>
-        <input type="number" id="cost" placeholder="Enter cost amount" min="0" step="any">
-
-        <button onclick="calculateProfit()">Calculate Profit</button>
-
-        <div id="result">
-            Your result will appear here.
-        </div>
-    </div>
-</section>
-<!-- ===== CUSTOMER INSIGHTS SURVEY ===== -->
-
-<style>
-#customer-insights {
-    padding: 60px 8%;
-    text-align: center;
-    color: white;
-}
-
-#customer-insights h2 {
-    color: #38bdf8;
-    font-size: 32px;
-}
-
-#customer-insights > p {
-    color: #cbd5e1;
-    margin-bottom: 30px;
-}
-
-.survey-container {
-    max-width: 750px;
-    margin: auto;
-    padding: 30px;
-    background: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 16px;
-    text-align: left;
-}
-
-.survey-container h3 {
-    color: #38bdf8;
-}
-
-.survey-container label {
-    display: block;
-    margin: 15px 0 8px;
-    color: white;
-}
-
-.survey-container select,
-.survey-container textarea {
-    width: 100%;
-    padding: 12px;
-    background: #0f172a;
-    color: white;
-    border: 1px solid #475569;
-    border-radius: 8px;
-}
-
-.survey-question {
-    margin-top: 25px;
-}
-
-.survey-option {
-    display: block;
-    padding: 9px;
-    background: #263449;
-    border-radius: 7px;
-    margin: 8px 0;
-    cursor: pointer;
-}
-
-.survey-option input {
-    margin-right: 10px;
-}
-
-.survey-submit {
-    width: 100%;
-    padding: 14px;
-    margin-top: 25px;
-    background: #0284c7;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.survey-submit:hover {
-    background: #0369a1;
-}
-
-#surveyMessage {
-    text-align: center;
-    color: #34d399;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-#surveySummary {
-    display: none;
-    margin-top: 25px;
-    padding: 20px;
-    background: #0f172a;
-    border-radius: 10px;
-    color: #cbd5e1;
-}
-</style>
-
-<section id="customer-insights">
-
-    <h2>Customer Insights & Surveys</h2>
-
-    <p>
-        Help us understand customer preferences,
-        shopping habits and satisfaction.
-    </p>
-
-    <div class="survey-container">
-
-        <h3>Select Customer Type</h3>
-
-        <label for="surveyCustomerType">
-            Choose your customer category:
-        </label>
-
-        <select id="surveyCustomerType">
-            <option value="">Select customer type</option>
-            <option value="new">New Customer</option>
-            <option value="regular">Regular Customer</option>
-            <option value="returning">Returning Customer</option>
-        </select>
-
-        <form id="customerSurvey">
-
-            <div id="surveyArea">
-                <p>Please select a customer type to begin.</p>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <span>01</span>
+                <p>Sales Analysis</p>
             </div>
 
-            <button type="submit"
-                    class="survey-submit"
-                    id="surveySubmit"
-                    hidden>
-                Submit Survey
-            </button>
-
-        </form>
-
-        <div id="surveyMessage"></div>
-
-        <div id="surveySummary">
-            <h3>Thank You!</h3>
-            <p>Your survey has been submitted successfully.</p>
-            <p id="answerSummary"></p>
-            <button type="button"
-                    class="survey-submit"
-                    id="newSurvey">
-                Take Another Survey
-            </button>
-        </div>
-
-    </div>
-
-</section>
-
-<script>
-(function () {
-
-    const typeSelect =
-        document.getElementById("surveyCustomerType");
-
-    const surveyArea =
-        document.getElementById("surveyArea");
-
-    const surveyForm =
-        document.getElementById("customerSurvey");
-
-    const submitButton =
-        document.getElementById("surveySubmit");
-
-    const message =
-        document.getElementById("surveyMessage");
-
-    const summary =
-        document.getElementById("surveySummary");
-
-    const answerSummary =
-        document.getElementById("answerSummary");
-
-    const surveys = {
-
-        new: {
-            title: "New Customer Survey",
-            questions: [
-                {
-                    name: "category",
-                    label: "Which product category interests you?",
-                    options: [
-                        "Electronics",
-                        "Fashion",
-                        "Home & Kitchen",
-                        "Beauty"
-                    ]
-                },
-                {
-                    name: "influence",
-                    label: "What influences your purchase?",
-                    options: [
-                        "Price",
-                        "Quality",
-                        "Discounts",
-                        "Brand"
-                    ]
-                },
-                {
-                    name: "discovery",
-                    label: "How did you discover our store?",
-                    options: [
-                        "Social Media",
-                        "Friends",
-                        "Online Search",
-                        "Advertisement"
-                    ]
-                }
-            ]
-        },
-
-        regular: {
-            title: "Regular Customer Survey",
-            questions: [
-                {
-                    name: "frequency",
-                    label: "How often do you shop?",
-                    options: [
-                        "Weekly",
-                        "Monthly",
-                        "Occasionally"
-                    ]
-                },
-                {
-                    name: "category",
-                    label: "Which category do you purchase most?",
-                    options: [
-                        "Electronics",
-                        "Fashion",
-                        "Home & Kitchen",
-                        "Beauty"
-                    ]
-                },
-                {
-                    name: "priority",
-                    label: "What matters most to you?",
-                    options: [
-                        "Price",
-                        "Quality",
-                        "Variety",
-                        "Customer Service"
-                    ]
-                }
-            ]
-        },
-
-        returning: {
-            title: "Returning Customer Survey",
-            questions: [
-                {
-                    name: "reason",
-                    label: "Why do you return to our store?",
-                    options: [
-                        "Good Quality",
-                        "Affordable Prices",
-                        "Product Variety",
-                        "Good Service"
-                    ]
-                },
-                {
-                    name: "satisfaction",
-                    label: "How satisfied are you?",
-                    options: [
-                        "Very Satisfied",
-                        "Satisfied",
-                        "Neutral",
-                        "Unsatisfied"
-                    ]
-                },
-                {
-                    name: "recommend",
-                    label: "Would you recommend our store?",
-                    options: [
-                        "Yes",
-                        "Maybe",
-                        "No"
-                    ]
-                }
-            ]
-        }
-    };
-
-    function displaySurvey(type) {
-
-        message.textContent = "";
-        summary.style.display = "none";
-
-        if (!type) {
-            surveyArea.innerHTML =
-                "<p>Please select a customer type to begin.</p>";
-
-            submitButton.hidden = true;
-            return;
-        }
-
-        const survey = surveys[type];
-
-        let html = "<h3>" + survey.title + "</h3>";
-
-        survey.questions.forEach(function (question, index) {
-
-            html += `
-                <div class="survey-question">
-                    <label>${index + 1}. ${question.label}</label>
-            `;
-
-            question.options.forEach(function (option) {
-
-                html += `
-                    <label class="survey-option">
-                        <input type="radio"
-                               name="${question.name}"
-                               value="${option}"
-                               required>
-                        ${option}
-                    </label>
-                `;
-
-            });
-
-            html += "</div>";
-        });
-
-        html += `
-            <div class="survey-question">
-                <label for="surveyOpinion">
-                    Additional suggestions (Optional)
-                </label>
-
-                <textarea id="surveyOpinion"
-                          rows="3"
-                          placeholder="Share your opinion..."></textarea>
+            <div class="stat-card">
+                <span>02</span>
+                <p>Profit Analysis</p>
             </div>
-        `;
 
-        surveyArea.innerHTML = html;
-        submitButton.hidden = false;
-    }
+            <div class="stat-card">
+                <span>03</span>
+                <p>Customer Insights</p>
+            </div>
+        </div>
+    </section>
 
-    typeSelect.addEventListener("change", function () {
-        displaySurvey(this.value);
-    });
 
-    surveyForm.addEventListener("submit", function (event) {
+    <!-- INTRODUCTION -->
+    <section id="about" class="section">
+        <p class="section-label">ABOUT THE PROJECT</p>
+        <h2>Introduction</h2>
 
-        event.preventDefault();
+        <div class="content-card">
+            <p>
+                E-Mart Global Sales Analysis is a data-analysis project
+                designed to study the sales and profit performance of
+                a retail business.
+            </p>
 
-        if (!typeSelect.value) return;
+            <p>
+                The project uses Python and data-analysis libraries
+                to understand product performance, sales trends,
+                categories and regional patterns.
+            </p>
 
-        const survey = surveys[typeSelect.value];
-        const formData = new FormData(surveyForm);
+            <p>
+                The results help present business information in
+                a simple and meaningful way.
+            </p>
+        </div>
+    </section>
 
-        const answers = [];
 
-        for (const question of survey.questions) {
+    <!-- OBJECTIVES -->
+    <section id="objectives" class="section">
+        <p class="section-label">OUR PURPOSE</p>
+        <h2>Project Objectives</h2>
 
-            const answer = formData.get(question.name);
+        <div class="card-grid">
 
-            if (!answer) {
-                message.textContent =
-                    "Please answer all survey questions.";
-                return;
-            }
+            <div class="feature-card">
+                <div class="card-number">01</div>
+                <h3>Sales Analysis</h3>
+                <p>Understand total sales and identify important sales patterns.</p>
+            </div>
 
-            answers.push(question.label + " " + answer);
-        }
+            <div class="feature-card">
+                <div class="card-number">02</div>
+                <h3>Profit Analysis</h3>
+                <p>Study business profitability and category-wise profit.</p>
+            </div>
 
-        const opinion =
-            document.getElementById("surveyOpinion").value;
+            <div class="feature-card">
+                <div class="card-number">03</div>
+                <h3>Product Performance</h3>
+                <p>Identify top-selling products and successful categories.</p>
+            </div>
 
-        answers.push("Additional suggestions: " +
-                     (opinion || "Not provided"));
+            <div class="feature-card">
+                <div class="card-number">04</div>
+                <h3>Regional Analysis</h3>
+                <p>Compare sales performance across different regions.</p>
+            </div>
 
-        answerSummary.textContent = answers.join(" | ");
+            <div class="feature-card">
+                <div class="card-number">05</div>
+                <h3>Customer Preferences</h3>
+                <p>Understand customer interests through a preference survey.</p>
+            </div>
 
-        message.textContent = "";
-        summary.style.display = "block";
+            <div class="feature-card">
+                <div class="card-number">06</div>
+                <h3>Data Interpretation</h3>
+                <p>Use data analysis to support better business decisions.</p>
+            </div>
 
-        surveyArea.style.display = "none";
-        submitButton.hidden = true;
-        typeSelect.disabled = true;
+        </div>
+    </section>
 
-        console.log("Customer survey response:", {
-            customerType: typeSelect.value,
-            answers: answers
-        });
 
-    });
+    <!-- TECHNOLOGIES -->
+    <section id="technology" class="section">
+        <p class="section-label">TOOLS USED</p>
+        <h2>Technologies Used</h2>
 
-    document.getElementById("newSurvey")
-        .addEventListener("click", function () {
+        <div class="technology-grid">
 
-            surveyForm.reset();
+            <div class="tech-card">
+                <span class="tech-icon">PY</span>
+                <h3>Python</h3>
+                <p>Used for calculations and data analysis.</p>
+            </div>
 
-            typeSelect.value = "";
-            typeSelect.disabled = false;
+            <div class="tech-card">
+                <span class="tech-icon">PD</span>
+                <h3>Pandas</h3>
+                <p>Used for data handling and manipulation.</p>
+            </div>
 
-            surveyArea.style.display = "block";
-            summary.style.display = "none";
+            <div class="tech-card">
+                <span class="tech-icon">MP</span>
+                <h3>Matplotlib</h3>
+                <p>Used for data visualization during analysis.</p>
+            </div>
 
-            displaySurvey("");
+            <div class="tech-card">
+                <span class="tech-icon">SQL</span>
+                <h3>SQL</h3>
+                <p>Used to retrieve and analyse database information.</p>
+            </div>
 
-        });
+            <div class="tech-card">
+                <span class="tech-icon">HTML</span>
+                <h3>HTML</h3>
+                <p>Creates the structure of the website.</p>
+            </div>
 
-})();
-</script>
+            <div class="tech-card">
+                <span class="tech-icon">CSS</span>
+                <h3>CSS & JavaScript</h3>
+                <p>Provides styling and interactive features.</p>
+            </div>
 
-<!-- ===== END CUSTOMER INSIGHTS ===== -->
- <!-- PERSONALIZED CUSTOMER SURVEY GRAPHS -->
+        </div>
+    </section>
 
-<style>
-#personal-results {
-    display: none;
-    padding: 40px 8%;
-    color: white;
-    text-align: center;
-}
 
-#personal-results h2 {
-    color: #38bdf8;
-    margin-bottom: 15px;
-}
+    <!-- DATASET -->
+    <section id="dataset" class="section">
+        <p class="section-label">DATA OVERVIEW</p>
+        <h2>Dataset Information</h2>
 
-.personal-graph-card {
-    background: #1e293b;
-    border: 1px solid #334155;
-    padding: 22px;
-    margin: 20px auto;
-    max-width: 750px;
-    border-radius: 14px;
-}
+        <div class="content-card">
+            <p>
+                The project uses retail sales data containing information
+                about products, categories, regions, sales and profits.
+            </p>
 
-.personal-graph-card h3 {
-    color: #38bdf8;
-}
+            <div class="dataset-tags">
+                <span>Sales</span>
+                <span>Profit</span>
+                <span>Products</span>
+                <span>Categories</span>
+                <span>Regions</span>
+                <span>Dates</span>
+            </div>
+        </div>
+    </section>
 
-.personal-graph-card canvas {
-    max-height: 260px;
-}
-</style>
 
-<section id="personal-results">
+    <!-- CUSTOMER INSIGHTS -->
+    <section id="insights" class="section">
+        <p class="section-label">UNDERSTANDING CUSTOMERS</p>
+        <h2>Customer Insights</h2>
 
-    <h2>Your Personal Shopping Insights</h2>
+        <p class="section-intro">
+            Customer preferences can help businesses understand
+            what people value when choosing products.
+        </p>
 
-    <p>These graphs are based on your own survey answers.</p>
+        <div class="card-grid">
 
-    <div id="personal-graph-container"></div>
+            <div class="insight-card">
+                <span class="insight-icon">✦</span>
+                <h3>Product Preferences</h3>
+                <p>Understanding which product categories attract customer interest.</p>
+            </div>
 
+            <div class="insight-card">
+                <span class="insight-icon">✦</span>
+                <h3>Shopping Frequency</h3>
+                <p>Learning how often customers make purchases.</p>
+            </div>
+
+            <div class="insight-card">
+                <span class="insight-icon">✦</span>
+                <h3>Customer Satisfaction</h3>
+                <p>Collecting opinions to understand customer experiences.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SURVEY -->
+    <section id="survey" class="section">
+        <p class="section-label">YOUR PREFERENCES MATTER</p>
+        <h2>Customer Preferences Survey</h2>
+
+        <div class="form-card">
+            <p class="form-description">
+                Share your shopping preferences and help us
+                understand customer interests.
+            </p>
+
+            <form id="surveyForm">
+
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName"
+                       placeholder="Enter your name" required>
+
+                <label for="category">Preferred Product Category</label>
+                <select id="category" required>
+                    <option value="">Choose a category</option>
+                    <option>Technology</option>
+                    <option>Furniture</option>
+                    <option>Office Supplies</option>
+                    <option>Clothing</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="frequency">Shopping Frequency</label>
+                <select id="frequency" required>
+                    <option value="">Select frequency</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Occasionally</option>
+                </select>
+
+                <label for="rating">How important is product quality?</label>
+                <select id="rating" required>
+                    <option value="">Select importance</option>
+                    <option>Very Important</option>
+                    <option>Important</option>
+                    <option>Moderately Important</option>
+                </select>
+
+                <button type="submit" class="submit-button">
+                    Submit Survey
+                </button>
+
+                <p id="surveyMessage" class="success-message"></p>
+
+            </form>
+        </div>
+    </section>
+<section id="surveyResults" class="section" hidden>
+    <p class="section-label">SURVEY RESULTS</p>
+    <h2>Customer Preferences Analysis</h2>
+
+    <div class="form-card">
+        <p class="form-description">
+            See which product categories customers prefer.
+        </p>
+
+        <div id="preferenceChart"></div>
+    </div>
 </section>
 
-<script>
-(function () {
+    <!-- FEEDBACK -->
+    <section id="feedback" class="section">
+        <p class="section-label">SHARE YOUR THOUGHTS</p>
+        <h2>Customer Feedback</h2>
 
-    const surveyForm =
-        document.getElementById("customerSurvey");
+        <div class="form-card">
+            <p class="form-description">
+                Your opinions and suggestions are valuable to us.
+            </p>
 
-    if (!surveyForm) return;
+            <form id="feedbackForm">
 
-    const results =
-        document.getElementById("personal-results");
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName"
+                       placeholder="Enter your name" required>
 
-    const container =
-        document.getElementById("personal-graph-container");
+                <label for="opinion">Your Opinion</label>
+                <textarea id="opinion"
+                          placeholder="Write your feedback here..."
+                          rows="5" required></textarea>
 
-    let personalCharts = [];
+                <button type="submit" class="submit-button">
+                    Send Feedback
+                </button>
 
-    surveyForm.addEventListener("submit", function () {
+                <p id="feedbackMessage" class="success-message"></p>
 
-        setTimeout(function () {
-
-            if (typeof Chart === "undefined") {
-                console.error("Chart.js is not loaded.");
-                return;
-            }
-
-            const selectedAnswers =
-                surveyForm.querySelectorAll(
-                    'input[type="radio"]:checked'
-                );
-
-            if (selectedAnswers.length === 0) return;
-
-            personalCharts.forEach(chart => chart.destroy());
-            personalCharts = [];
-
-            container.innerHTML = "";
-
-            selectedAnswers.forEach(function (answer, index) {
-
-                const question =
-                    answer.closest(".survey-question");
-
-                const questionTitle =
-                    question.querySelector("label").textContent;
-
-                const options = Array.from(
-                    question.querySelectorAll(
-                        'input[type="radio"]'
-                    )
-                ).map(input => input.value);
-
-                const card = document.createElement("div");
-                card.className = "personal-graph-card";
-
-                const heading = document.createElement("h3");
-                heading.textContent = questionTitle;
-
-                const canvas = document.createElement("canvas");
-
-                card.appendChild(heading);
-                card.appendChild(canvas);
-
-                container.appendChild(card);
-
-                const chart = new Chart(canvas, {
-
-                    type: "doughnut",
-
-                    data: {
-                        labels: options,
-
-                        datasets: [{
-                            label: "Your answer",
-                            data: options.map(option =>
-                                option === answer.value ? 100 : 0
-                            ),
-                            backgroundColor: options.map(option =>
-                                option === answer.value
-                                ? "#38bdf8"
-                                : "#334155"
-                            ),
-                            borderWidth: 1
-                        }]
-                    },
-
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-
-                        plugins: {
-                            legend: {
-                                position: "bottom",
-                                labels: {
-                                    color: "white"
-                                }
-                            },
-
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        return context.label +
-                                            (context.raw === 100
-                                            ? ": Your selection"
-                                            : "");
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                });
-
-                personalCharts.push(chart);
-
-            });
-
-            results.style.display = "block";
-
-            results.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }, 100);
-
-    });
-
-})();
-</script>
-
-<!-- END PERSONALIZED GRAPHS -->
+            </form>
+        </div>
+    </section>
 
 
-<section id="conclusion" class="section">
-    <p class="tag">FINAL SUMMARY</p>
-    <h2>Conclusion</h2>
-    <p class="description">
-        This project demonstrates how Python, Pandas and Matplotlib
-        can be used to analyse and visualize sales information.
-        SQL helps retrieve useful information, while the interactive
-        website presents the project in a simple and understandable way.
-    </p>
-</section>
+    <!-- CONCLUSION -->
+    <section id="conclusion" class="section">
+        <p class="section-label">FINAL THOUGHTS</p>
+        <h2>Conclusion</h2>
+
+        <div class="conclusion-card">
+            <p>
+                E-Mart Global Sales Analysis demonstrates how data
+                analysis can help understand business performance.
+                By studying sales, profits, products and customer
+                preferences, businesses can gain useful insights
+                and make informed decisions.
+            </p>
+
+            <a href="#home" class="main-button">Back to Home ↑</a>
+        </div>
+    </section>
+
+</main>
 
 <footer>
-    <h3>E-MART GLOBAL</h3>
-    <p>Sales Analysis | Informatics Practices Project</p>
-    <p>Created using Python, HTML, CSS and JavaScript</p>
+    <p>E-Mart Global Sales Analysis</p>
+    <span>Data-driven insights for better business decisions.</span>
 </footer>
 
-<script src="javascript.js"></script>
-<section id="customer-analytics">
-    <h2>Customer Analytics</h2>
-    <p>Explore customer preferences and purchasing behaviour.</p>
+<script src="script.js"></script>
 
-    <div class="analytics-container">
-
-        <div class="analytics-card">
-            <h3>Customer Preferences</h3>
-            <canvas id="preferenceChart"></canvas>
-        </div>
-
-        <div class="analytics-card">
-            <h3>Purchase Frequency</h3>
-            <canvas id="frequencyChart"></canvas>
-        </div>
-
-        <div class="analytics-card">
-            <h3>Customer Segments</h3>
-            <canvas id="segmentChart"></canvas>
-        </div>
-
-    </div>
-</section>
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- Customer Analytics Graphs -->
-<script>
-new Chart(document.getElementById('preferenceChart'), {
-    type: 'doughnut',
-    data: {
-        labels: ['Electronics', 'Fashion', 'Home', 'Beauty'],
-        datasets: [{
-            data: [35, 30, 20, 15],
-            backgroundColor: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24']
-        }]
-    }
-});
-
-new Chart(document.getElementById('frequencyChart'), {
-    type: 'bar',
-    data: {
-        labels: ['Daily', 'Weekly', 'Monthly', 'Rarely'],
-        datasets: [{
-            label: 'Customers',
-            data: [15, 40, 30, 15],
-            backgroundColor: '#38bdf8'
-        }]
-    }
-});
-
-new Chart(document.getElementById('segmentChart'), {
-    type: 'pie',
-    data: {
-        labels: ['New', 'Regular', 'Returning'],
-        datasets: [{
-            data: [30, 40, 30],
-            backgroundColor: ['#818cf8', '#34d399', '#fbbf24']
-        }]
-    }
-});
-</script>
 </body>
 </html>
