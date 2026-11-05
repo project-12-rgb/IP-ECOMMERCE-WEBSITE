@@ -4,366 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Mart Global Sales Analysis</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">E-MART<span>.</span></div>
+<div class="dashboard">
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Introduction</a></li>
-            <li><a href="#objectives">Objectives</a></li>
-            <li><a href="#technology">Technologies</a></li>
-            <li><a href="#insights">Customer Insights</a></li>
-            <li><a href="#survey">Survey</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-        </ul>
-    </nav>
-</header>
+    <aside class="sidebar">
+        <h2>E-MART</h2>
+        <p class="side-subtitle">SALES ANALYSIS</p>
 
-<main>
+        <nav>
+            <a href="#home">Dashboard</a>
+            <a href="#overview">Sales Overview</a>
+            <a href="#visualizations">Visualizations</a>
+            <a href="#tools">Analysis Tools</a>
+            <a href="#survey">Customer Survey</a>
+            <a href="#conclusion">Conclusion</a>
+        </nav>
+    </aside>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="tagline">DATA • BUSINESS • INSIGHTS</p>
+    <main class="main-content">
 
-            <h1>
-                E-Mart Global<br>
-                <span>Sales Analysis</span>
-            </h1>
-
-            <p class="hero-description">
-                Discover meaningful patterns in sales, profit,
-                products and customer preferences through data analysis.
-            </p>
-
-            <a href="#about" class="main-button">Explore Project</a>
-        </div>
-
-        <div class="hero-stats">
-            <div class="stat-card">
-                <span>01</span>
-                <p>Sales Analysis</p>
-            </div>
-
-            <div class="stat-card">
-                <span>02</span>
-                <p>Profit Analysis</p>
-            </div>
-
-            <div class="stat-card">
-                <span>03</span>
-                <p>Customer Insights</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- INTRODUCTION -->
-    <section id="about" class="section">
-        <p class="section-label">ABOUT THE PROJECT</p>
-        <h2>Introduction</h2>
-
-        <div class="content-card">
+        <section id="home" class="hero">
+            <p class="eyebrow">DATA ANALYTICS PROJECT</p>
+            <h1>E-Mart Global Sales Analysis</h1>
             <p>
-                E-Mart Global Sales Analysis is a data-analysis project
-                designed to study the sales and profit performance of
-                a retail business.
+                Explore sales performance, product categories and customer
+                preferences through interactive data analysis.
             </p>
+            <a href="#overview" class="main-button">Explore Dashboard</a>
+        </section>
 
-            <p>
-                The project uses Python and data-analysis libraries
-                to understand product performance, sales trends,
-                categories and regional patterns.
-            </p>
-
-            <p>
-                The results help present business information in
-                a simple and meaningful way.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- OBJECTIVES -->
-    <section id="objectives" class="section">
-        <p class="section-label">OUR PURPOSE</p>
-        <h2>Project Objectives</h2>
-
-        <div class="card-grid">
-
-            <div class="feature-card">
-                <div class="card-number">01</div>
-                <h3>Sales Analysis</h3>
-                <p>Understand total sales and identify important sales patterns.</p>
+        <section id="overview">
+            <div class="section-heading">
+                <p class="eyebrow">PROJECT SUMMARY</p>
+                <h2>Sales Overview</h2>
             </div>
 
-            <div class="feature-card">
-                <div class="card-number">02</div>
-                <h3>Profit Analysis</h3>
-                <p>Study business profitability and category-wise profit.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p>Total Revenue</p>
+                    <h3 id="totalRevenue">₹0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Orders</p>
+                    <h3 id="totalOrders">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <p>Units Sold</p>
+                    <h3 id="totalUnits">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <p>Product Categories</p>
+                    <h3 id="totalCategories">0</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualizations">
+            <div class="section-heading">
+                <p class="eyebrow">DATA PRESENTATION</p>
+                <h2>Sales Visualizations</h2>
+                <p>Graphs generated from the sales dataset.</p>
             </div>
 
-            <div class="feature-card">
-                <div class="card-number">03</div>
-                <h3>Product Performance</h3>
-                <p>Identify top-selling products and successful categories.</p>
+            <div class="charts-grid">
+
+                <div class="chart-card">
+                    <h3>Sales by Category</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Customer Distribution</h3>
+                    <canvas id="customerChart"></canvas>
+                </div>
+
+                <div class="chart-card wide-chart">
+                    <h3>Daily Sales Trend</h3>
+                    <canvas id="dailyChart"></canvas>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="section-heading">
+                <p class="eyebrow">INTERACTIVE ANALYSIS</p>
+                <h2>Sales Analysis Tools</h2>
+                <p>Explore the dataset using the tools below.</p>
             </div>
 
-            <div class="feature-card">
-                <div class="card-number">04</div>
-                <h3>Regional Analysis</h3>
-                <p>Compare sales performance across different regions.</p>
+            <div class="tools-grid">
+
+                <div class="tool-card">
+                    <h3>01. Sales Analyzer</h3>
+                    <p>Select a category to view its sales.</p>
+
+                    <select id="categorySelect">
+                        <option value="All">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Home Decor">Home Decor</option>
+                        <option value="Books">Books</option>
+                    </select>
+
+                    <button onclick="analyzeCategory()">Analyze Sales</button>
+                    <p id="categoryResult" class="result"></p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>02. Revenue Calculator</h3>
+                    <p>Calculate revenue using price and quantity.</p>
+
+                    <input type="number" id="priceInput" placeholder="Enter price (₹)">
+                    <input type="number" id="quantityInput" placeholder="Enter quantity">
+
+                    <button onclick="calculateRevenue()">Calculate</button>
+                    <p id="revenueResult" class="result"></p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>03. Customer Analyzer</h3>
+                    <p>Explore purchases by customer type.</p>
+
+                    <select id="customerSelect">
+                        <option value="All">All Customers</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Regular">Regular</option>
+                        <option value="New">New</option>
+                    </select>
+
+                    <button onclick="analyzeCustomer()">Analyze Customers</button>
+                    <p id="customerResult" class="result"></p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>04. Date Filter</h3>
+                    <p>View sales on a selected purchase date.</p>
+
+                    <input type="date" id="dateInput">
+
+                    <button onclick="filterByDate()">Find Sales</button>
+                    <p id="dateResult" class="result"></p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>05. Customer Preferences</h3>
+                    <p>Share your shopping preferences in the survey below.</p>
+
+                    <a href="#survey" class="tool-link">Open Customer Survey</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="survey">
+            <div class="section-heading">
+                <p class="eyebrow">CUSTOMER FEEDBACK</p>
+                <h2>Customer Preference Survey</h2>
+                <p>Submit your preferences to contribute to the survey results.</p>
             </div>
 
-            <div class="feature-card">
-                <div class="card-number">05</div>
-                <h3>Customer Preferences</h3>
-                <p>Understand customer interests through a preference survey.</p>
+            <div class="survey-layout">
+
+                <form id="surveyForm" class="survey-card">
+
+                    <label for="surveyCustomer">Customer Type</label>
+                    <select id="surveyCustomer" required>
+                        <option value="">Select customer type</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Regular">Regular</option>
+                        <option value="New">New</option>
+                    </select>
+
+                    <label for="surveyCategory">Preferred Category</label>
+                    <select id="surveyCategory" required>
+                        <option value="">Select category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Home Decor">Home Decor</option>
+                        <option value="Books">Books</option>
+                    </select>
+
+                    <label for="surveyPayment">Preferred Payment Method</label>
+                    <select id="surveyPayment" required>
+                        <option value="">Select payment method</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
+                        <option value="Online">Online Payment</option>
+                    </select>
+
+                    <label for="surveyFrequency">Shopping Frequency</label>
+                    <select id="surveyFrequency" required>
+                        <option value="">Select frequency</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Occasionally">Occasionally</option>
+                    </select>
+
+                    <label for="surveyRating">Rate Your Shopping Experience</label>
+                    <select id="surveyRating" required>
+                        <option value="">Select rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Average</option>
+                        <option value="1">1 - Needs Improvement</option>
+                    </select>
+
+                    <label for="surveyOpinion">Your Opinion</label>
+                    <textarea id="surveyOpinion"
+                        placeholder="Write your feedback..."
+                        required></textarea>
+
+                    <button type="submit">Submit Feedback</button>
+
+                    <p id="surveyMessage" class="result"></p>
+
+                </form>
+
+                <div class="survey-card">
+                    <h3>Survey Results</h3>
+                    <p>Customer preferences submitted through this website.</p>
+                    <canvas id="surveyChart"></canvas>
+                    <p id="surveyCount" class="result">Responses: 0</p>
+                </div>
+
             </div>
 
-            <div class="feature-card">
-                <div class="card-number">06</div>
-                <h3>Data Interpretation</h3>
-                <p>Use data analysis to support better business decisions.</p>
+            <div class="opinions-card">
+                <h3>Customer Opinions</h3>
+                <div id="opinionsList">
+                    <p>No feedback submitted yet.</p>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-
-    <!-- TECHNOLOGIES -->
-    <section id="technology" class="section">
-        <p class="section-label">TOOLS USED</p>
-        <h2>Technologies Used</h2>
-
-        <div class="technology-grid">
-
-            <div class="tech-card">
-                <span class="tech-icon">PY</span>
-                <h3>Python</h3>
-                <p>Used for calculations and data analysis.</p>
+        <section id="conclusion">
+            <div class="conclusion-card">
+                <p class="eyebrow">PROJECT SUMMARY</p>
+                <h2>Conclusion</h2>
+                <p>
+                    This project analyses E-Mart sales data to understand
+                    revenue, product categories and customer distribution.
+                    Python, Pandas and data visualizations help present
+                    information clearly, while the interactive website
+                    allows users to explore sales and share their preferences.
+                </p>
             </div>
+        </section>
 
-            <div class="tech-card">
-                <span class="tech-icon">PD</span>
-                <h3>Pandas</h3>
-                <p>Used for data handling and manipulation.</p>
-            </div>
+        <footer>
+            E-Mart Global Sales Analysis | Information Practices Project
+        </footer>
 
-            <div class="tech-card">
-                <span class="tech-icon">MP</span>
-                <h3>Matplotlib</h3>
-                <p>Used for data visualization during analysis.</p>
-            </div>
+    </main>
+</div>
 
-            <div class="tech-card">
-                <span class="tech-icon">SQL</span>
-                <h3>SQL</h3>
-                <p>Used to retrieve and analyse database information.</p>
-            </div>
-
-            <div class="tech-card">
-                <span class="tech-icon">HTML</span>
-                <h3>HTML</h3>
-                <p>Creates the structure of the website.</p>
-            </div>
-
-            <div class="tech-card">
-                <span class="tech-icon">CSS</span>
-                <h3>CSS & JavaScript</h3>
-                <p>Provides styling and interactive features.</p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- DATASET -->
-    <section id="dataset" class="section">
-        <p class="section-label">DATA OVERVIEW</p>
-        <h2>Dataset Information</h2>
-
-        <div class="content-card">
-            <p>
-                The project uses retail sales data containing information
-                about products, categories, regions, sales and profits.
-            </p>
-
-            <div class="dataset-tags">
-                <span>Sales</span>
-                <span>Profit</span>
-                <span>Products</span>
-                <span>Categories</span>
-                <span>Regions</span>
-                <span>Dates</span>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CUSTOMER INSIGHTS -->
-    <section id="insights" class="section">
-        <p class="section-label">UNDERSTANDING CUSTOMERS</p>
-        <h2>Customer Insights</h2>
-
-        <p class="section-intro">
-            Customer preferences can help businesses understand
-            what people value when choosing products.
-        </p>
-
-        <div class="card-grid">
-
-            <div class="insight-card">
-                <span class="insight-icon">✦</span>
-                <h3>Product Preferences</h3>
-                <p>Understanding which product categories attract customer interest.</p>
-            </div>
-
-            <div class="insight-card">
-                <span class="insight-icon">✦</span>
-                <h3>Shopping Frequency</h3>
-                <p>Learning how often customers make purchases.</p>
-            </div>
-
-            <div class="insight-card">
-                <span class="insight-icon">✦</span>
-                <h3>Customer Satisfaction</h3>
-                <p>Collecting opinions to understand customer experiences.</p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- SURVEY -->
-    <section id="survey" class="section">
-        <p class="section-label">YOUR PREFERENCES MATTER</p>
-        <h2>Customer Preferences Survey</h2>
-
-        <div class="form-card">
-            <p class="form-description">
-                Share your shopping preferences and help us
-                understand customer interests.
-            </p>
-
-            <form id="surveyForm">
-
-                <label for="customerName">Your Name</label>
-                <input type="text" id="customerName"
-                       placeholder="Enter your name" required>
-
-                <label for="category">Preferred Product Category</label>
-                <select id="category" required>
-                    <option value="">Choose a category</option>
-                    <option>Technology</option>
-                    <option>Furniture</option>
-                    <option>Office Supplies</option>
-                    <option>Clothing</option>
-                    <option>Other</option>
-                </select>
-
-                <label for="frequency">Shopping Frequency</label>
-                <select id="frequency" required>
-                    <option value="">Select frequency</option>
-                    <option>Weekly</option>
-                    <option>Monthly</option>
-                    <option>Occasionally</option>
-                </select>
-
-                <label for="rating">How important is product quality?</label>
-                <select id="rating" required>
-                    <option value="">Select importance</option>
-                    <option>Very Important</option>
-                    <option>Important</option>
-                    <option>Moderately Important</option>
-                </select>
-
-                <button type="submit" class="submit-button">
-                    Submit Survey
-                </button>
-
-                <p id="surveyMessage" class="success-message"></p>
-
-            </form>
-        </div>
-    </section>
-<section id="surveyResults" class="section" hidden>
-    <p class="section-label">SURVEY RESULTS</p>
-    <h2>Customer Preferences Analysis</h2>
-
-    <div class="form-card">
-        <p class="form-description">
-            See which product categories customers prefer.
-        </p>
-
-        <div id="preferenceChart"></div>
-    </div>
-</section>
-
-    <!-- FEEDBACK -->
-    <section id="feedback" class="section">
-        <p class="section-label">SHARE YOUR THOUGHTS</p>
-        <h2>Customer Feedback</h2>
-
-        <div class="form-card">
-            <p class="form-description">
-                Your opinions and suggestions are valuable to us.
-            </p>
-
-            <form id="feedbackForm">
-
-                <label for="feedbackName">Your Name</label>
-                <input type="text" id="feedbackName"
-                       placeholder="Enter your name" required>
-
-                <label for="opinion">Your Opinion</label>
-                <textarea id="opinion"
-                          placeholder="Write your feedback here..."
-                          rows="5" required></textarea>
-
-                <button type="submit" class="submit-button">
-                    Send Feedback
-                </button>
-
-                <p id="feedbackMessage" class="success-message"></p>
-
-            </form>
-        </div>
-    </section>
-
-
-    <!-- CONCLUSION -->
-    <section id="conclusion" class="section">
-        <p class="section-label">FINAL THOUGHTS</p>
-        <h2>Conclusion</h2>
-
-        <div class="conclusion-card">
-            <p>
-                E-Mart Global Sales Analysis demonstrates how data
-                analysis can help understand business performance.
-                By studying sales, profits, products and customer
-                preferences, businesses can gain useful insights
-                and make informed decisions.
-            </p>
-
-            <a href="#home" class="main-button">Back to Home ↑</a>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <p>E-Mart Global Sales Analysis</p>
-    <span>Data-driven insights for better business decisions.</span>
-</footer>
-
-<script src="script.js"></script>
+<script src="JavaScript.js"></script>
 
 </body>
 </html>
